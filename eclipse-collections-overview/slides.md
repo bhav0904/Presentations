@@ -8,6 +8,9 @@ What is Eclipse Collections?
 * Rich Lambda-Ready API
 * Additional collection types not found in the JDK like Bags, Multmaps\
 
+
+
+
 Internal Iteration Example - Collect
 ------------------------------------
 JDK 7 Collect
