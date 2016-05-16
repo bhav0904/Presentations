@@ -14,7 +14,13 @@ What is Eclipse Collections?
 Internal Iteration Example - Collect
 ------------------------------------
 JDK 7 Collect
-``
+```
 List<Person> people = Arrays.asList(person1, person2, person3);
-``
+List<Address> addresses = new ArrayList<>();
+
+for (Person person : people) 
+{
+    addresses.add(people.getAddress());    
+}
+```
 
