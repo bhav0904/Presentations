@@ -61,13 +61,13 @@ MutableList<Address> addressesMethodReference =
 
 Comparison with other Java Collections Frameworks
 --------------------------------------------------
-![EC Features Comparison](https://raw.githubusercontent.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_Features.png)
+![EC Features Comparison](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_Features.png)
 
 
 
 How rich & lambda-ready is your iterable?
 -----------------------------------------
-![EC Features Comparison](https://raw.githubusercontent.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_RichIterable.png)
+![EC Features Comparison](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_RichIterable.png)
 
 
 
@@ -116,7 +116,7 @@ Multimap<String,Person> peopleByState =
 Multimap<String,Person> peopleByState = 
     people.groupBy(Person::getState);
 ```
-![People By State](https://raw.githubusercontent.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_PeopleByState.png)
+![People By State](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_PeopleByState.png)
 
 ```
 MutableListMultimap<String,Person> peopleByState = 
@@ -135,7 +135,7 @@ Lambda-Ready API - groupByEach
 * Problem Statement: Every person has multiple addresses, each in a different state.
 * Group people by state where a person appears as a value mapped to **every** state she has an address in.
 
-![People By State](https://raw.githubusercontent.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_PeopleByStates.png)
+![People By State](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_PeopleByStates.png)
 
 Plain JDK 8 (no iteration pattern)
 ```
@@ -188,7 +188,7 @@ UnifiedMap
 
 Save 50% Memory with the EC UnifiedMap
 ---------------------------------------
-![UnifiedMap Memory](https://raw.githubusercontent.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/UnifiedMap.png)
+![UnifiedMap Memory](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/UnifiedMap.png)
 
 
 UnifiedSet
@@ -200,7 +200,7 @@ UnifiedSet
 
 Save 400% Memory with the EC UnifiedSet
 ---------------------------------------
-![UnifiedSet Memory](https://raw.githubusercontent.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/UnifiedSet.png)
+![UnifiedSet Memory](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/UnifiedSet.png)
 
 
 Primitive Collections
@@ -224,5 +224,5 @@ Primitive Collections
 
 Save Memory with Primitive Collections: IntList
 ------------------------------------------------
-![IntArrayList Memory](https://raw.githubusercontent.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/IntArrayList.png)
+![IntArrayList Memory](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/IntArrayList.png)
 
