@@ -122,6 +122,8 @@ Lambda-Ready API - groupByEach
 * Problem Statement: Every person has multiple addresses, each in a different state.
 * Group people by state where a person appears as a value mapped to **every** state she has an address in.
 
+![People By State](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_PeopleByStates.png)
+
 Plain JDK 8 (no iteration pattern)
 ```
 Map<String, List<Person>> peopleByStates = new HashMap<>();
