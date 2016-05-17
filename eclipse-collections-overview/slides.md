@@ -66,7 +66,7 @@ Java Collections Frameworks Comparison
 
 
 How rich & lambda-ready is your iterable?
------------------------------------------
+
 ![EC Features Comparison](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_RichIterable.png)
 
 
@@ -91,9 +91,15 @@ MutableList<Person> sortedByName =
     people.toSortedListBy(person -> person.getLastName());
 ```
 ```
-MutableList<Person> sortedByName = people.toSortedListBy(Person::getLastName);
+MutableList<Person> sortedByName = 
+    people.toSortedListBy(Person::getLastName);
 ```
 
+
+
+
+Lambda-Ready API
+----------------
 Finding the oldest person
 ```
 Person oldestPerson = 
@@ -108,14 +114,18 @@ Person oldestPerson =
 The "with" Methods & Java 8 Method References
 ---------------------------------------------
 ```
-MutableList<Person> adults = people.select(person -> person.olderThan(18));
+MutableList<Person> adults = 
+    people.select(person -> person.olderThan(18));
 ```
 ```
-MutableList<Person> drivers = people.selectWith(Person::olderThan, 16);
+MutableList<Person> drivers = 
+    people.selectWith(Person::olderThan, 16);
 
-MutableList<Person> voters = people.selectWith(Person::olderThan, 18);
+MutableList<Person> voters = 
+    people.selectWith(Person::olderThan, 18);
 
-MutableList<Person> drinkers = people.selectWith(Person::olderThan, 21);
+MutableList<Person> drinkers = 
+    people.selectWith(Person::olderThan, 21);
 ```
 
 
@@ -132,6 +142,11 @@ Multimap<String,Person> peopleByState =
     people.groupBy(Person::getState);
 ```
 ![People By State](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_PeopleByState.png)
+
+
+
+Lambda-Ready API - groupBy
+---------------------------
 
 ```
 MutableListMultimap<String,Person> peopleByState = 
@@ -151,6 +166,9 @@ Lambda-Ready API - groupByEach
 * Group people by state where a person appears as a value mapped to **every** state she has an address in.
 
 ![People By State](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_PeopleByStates.png)
+
+
+
 
 Plain JDK 8 (no iteration pattern)
 ```
@@ -172,14 +190,20 @@ return peopleByStates;
 ```
 
 
+
 Eclipse Collections groupByEach
 
 ```
 Multimap<String, Person> peopleByStates = people.groupByEach(Person::getStates);
 ```
 
+
+
+
 Memory Optimization
 ====================
+
+
 
 
 Memory Optimization
@@ -217,7 +241,6 @@ Save 400% Memory with the EC UnifiedSet
 
 Primitive Collections
 ----------------------
-
 * What are primitives?
     * Not everything in java is an Object.
     * Primitive types are automatic variables that are not references.
@@ -226,6 +249,11 @@ Primitive Collections
     * Reduced memory usage
     * Improved performance
     * Eliminates the need to depend on multiple libraries – PCJ, Trove etc.
+
+
+
+Primitive Collections
+----------------------
 * What primitive collections are available in EC?
     * List, Set, Map (all primitive/object combinations)
     * Stack
