@@ -59,5 +59,11 @@ MutableList<Address> addressesMethodReference =
 ```
 
 
+Comparison with other Java Collections Frameworks
+--------------------------------------------------
+![EC Features Comparison](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_Features.png)
+
+
+
 
 
