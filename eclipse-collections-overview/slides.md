@@ -64,6 +64,39 @@ Comparison with other Java Collections Frameworks
 ![EC Features Comparison](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_Features.png)
 
 
+How rich & lambda-ready is your iterable?
+-----------------------------------------
+![EC Features Comparison](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_RichIterable.png)
+
+
+
+Lambda-Ready API
+-----------------
+
+```
+MutableList<Person> people = Lists.mutable.of(person1, person2, person3);
+```
+
+Selecting people whose age is greater than 18
+```
+MutableList<Person> adults = people.select(person -> person.getAge() > 18);
+```
+
+Sorting people by their last name 
+```
+MutableList<Person> sortedByName = people.toSortedListBy(person -> person.getLastName());
+```
+```
+MutableList<Person> sortedByName = people.toSortedListBy(Person::getLastName);
+```
+
+Finding the oldest person
+```
+Person oldestPerson = people.maxBy(person -> person.getAge());
+```
+```
+Person oldestPerson = people.maxBy(Person::getAge);
+```
 
 
 
