@@ -263,7 +263,7 @@ Primitive Collections
 
 
 Save Memory with Primitive Collections: IntList
-------------------------------------------------
+
 ![IntArrayList Memory](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/IntArrayList.png)
 
 
