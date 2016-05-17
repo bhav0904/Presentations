@@ -99,4 +99,112 @@ Person oldestPerson = people.maxBy(Person::getAge);
 ```
 
 
+Lambda-Ready API - groupBy
+---------------------------
+Grouping people by state
+```
+Multimap<String,Person> peopleByState = people.groupBy(person -> person.getState());
+```
+```
+Multimap<String,Person> peopleByState = people.groupBy(Person::getState);
+```
+![People By State](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_PeopleByState.png)
+
+```
+MutableListMultimap<String,Person> peopleByState = people.groupBy(Person::getState);
+```
+```
+MutableList<Person> newYorkers = peopleByState.get(“NY");
+```
+
+Lambda-Ready API - groupByEach
+-------------------------------
+* Problem Statement: Every person has multiple addresses, each in a different state.
+* Group people by state where a person appears as a value mapped to **every** state she has an address in.
+
+Plain JDK 8 (no iteration pattern)
+```
+Map<String, List<Person>> peopleByStates = new HashMap<>();
+
+for (Person person : people) 
+{
+    MutableList<String> states = person.getStates();
+
+    for (String state : states) {
+        if (peopleByStates.get(state) == null)
+        {
+            peopleByStates.put(state, new ArrayList<>());
+        }
+        peopleByStates.get(state).add(person);
+    }
+}
+return peopleByStates;
+```
+
+
+Eclipse Collections groupByEach
+
+```
+Multimap<String, Person> peopleByStates = people.groupByEach(Person::getStates);
+```
+
+Memory Optimization
+====================
+
+
+Memory Optimization
+-----------------------
+* UnifiedMap - built wihtout using Entry objects.
+* UnifiedSet - not built using a map.
+* Empty should be empty.
+* Primitive Collections.
+* Memory-efficient containers for small-sized collections.
+
+
+UnifiedMap
+----------
+* For every put, HashMap creates an Entry object.
+* UnifiedMap stores keys and values in alternate slots on a single array.
+* Consecutive memory locations are faster to access.
+
+
+Save 50% Memory with the EC UnifiedMap
+---------------------------------------
+![UnifiedMap Memory](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/UnifiedMap.png)
+
+
+UnifiedSet
+----------
+* HashSet uses HashMap as its backing collection.
+* For every add, an Entry object is created with the element as key and null value.
+* UnifiedSet uses an array as its backing collection.
+
+
+Save 400% Memory with the EC UnifiedSet
+---------------------------------------
+![UnifiedSet Memory](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/UnifiedSet.png)
+
+
+Primitive Collections
+----------------------
+
+* What are primitives?
+    * Not everything in java is an Object.
+    * Primitive types are automatic variables that are not references.
+    * The variables hold the value and its place on the stack, so it’s much more efficient.
+* Why primitive collections?
+    * Reduced memory usage
+    * Improved performance
+    * Eliminates the need to depend on multiple libraries – PCJ, Trove etc.
+* What primitive collections are available in EC?
+    * List, Set, Map (all primitive/object combinations)
+    * Stack
+    * Bag
+* For what all primitive types? 
+    * All eight: boolean, byte, char, double, float, int, long, short
+
+
+Save Memory with Primitive Collections: IntList
+------------------------------------------------
+![IntArrayList Memory](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/IntArrayList.png)
 
