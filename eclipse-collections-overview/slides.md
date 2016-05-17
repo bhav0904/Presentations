@@ -74,17 +74,20 @@ Lambda-Ready API
 -----------------
 
 ```
-MutableList<Person> people = Lists.mutable.of(person1, person2, person3);
+MutableList<Person> people = 
+    Lists.mutable.of(person1, person2, person3);
 ```
 
 Selecting people whose age is greater than 18
 ```
-MutableList<Person> adults = people.select(person -> person.getAge() > 18);
+MutableList<Person> adults = 
+    people.select(person -> person.getAge() > 18);
 ```
 
 Sorting people by their last name 
 ```
-MutableList<Person> sortedByName = people.toSortedListBy(person -> person.getLastName());
+MutableList<Person> sortedByName = 
+    people.toSortedListBy(person -> person.getLastName());
 ```
 ```
 MutableList<Person> sortedByName = people.toSortedListBy(Person::getLastName);
@@ -92,10 +95,12 @@ MutableList<Person> sortedByName = people.toSortedListBy(Person::getLastName);
 
 Finding the oldest person
 ```
-Person oldestPerson = people.maxBy(person -> person.getAge());
+Person oldestPerson = 
+    people.maxBy(person -> person.getAge());
 ```
 ```
-Person oldestPerson = people.maxBy(Person::getAge);
+Person oldestPerson = 
+    people.maxBy(Person::getAge);
 ```
 
 
@@ -103,19 +108,26 @@ Lambda-Ready API - groupBy
 ---------------------------
 Grouping people by state
 ```
-Multimap<String,Person> peopleByState = people.groupBy(person -> person.getState());
+Multimap<String,Person> peopleByState = 
+    people.groupBy(person -> person.getState());
 ```
 ```
-Multimap<String,Person> peopleByState = people.groupBy(Person::getState);
+Multimap<String,Person> peopleByState = 
+    people.groupBy(Person::getState);
 ```
 ![People By State](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_PeopleByState.png)
 
 ```
-MutableListMultimap<String,Person> peopleByState = people.groupBy(Person::getState);
+MutableListMultimap<String,Person> peopleByState = 
+    people.groupBy(Person::getState);
 ```
 ```
-MutableList<Person> newYorkers = peopleByState.get(“NY");
+MutableList<Person> newYorkers = 
+    peopleByState.get(“NY");
 ```
+
+
+
 
 Lambda-Ready API - groupByEach
 -------------------------------
@@ -149,6 +161,9 @@ Eclipse Collections groupByEach
 ```
 Multimap<String, Person> peopleByStates = people.groupByEach(Person::getStates);
 ```
+
+
+
 
 Memory Optimization
 ====================
