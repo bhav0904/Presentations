@@ -226,3 +226,25 @@ Save Memory with Primitive Collections: IntList
 ------------------------------------------------
 ![IntArrayList Memory](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/IntArrayList.png)
 
+
+
+Resources
+----------
+* https://www.eclipse.org/collections/
+* Eclipse Collections @ github : https://github.com/eclipse/eclipse-collections
+* Eclipse Collections Kata : https://github.com/eclipse/eclipse-collections-kata
+    * Fun way to learn idiomatic Eclipse Collections usage
+* Eclipse Collectins wiki: https://github.com/eclipse/eclipse-collections/wiki
+    *  Slides and videos of previous conference talks
+    *  Articles
+
+
+Are you up for the challenge?
+----------------------------------
+* Contribute to a code base with over 98% test coverage and strict code quality standards.
+* Learn the usage of Java 8 lambdas (the unit tests are written in Java 8)
+* Learn code generation using StringTemplate when you contribute to primitive collections.
+* Roadmap available on github: https://github.com/eclipse/eclipse-collections/wiki/Roadmap
+
+
+
