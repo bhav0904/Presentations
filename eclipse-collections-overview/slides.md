@@ -105,6 +105,21 @@ Person oldestPerson =
 ```
 
 
+The "with" Methods & Java 8 Method References
+---------------------------------------------
+```
+MutableList<Person> adults = people.select(person -> person.olderThan(18));
+```
+```
+MutableList<Person> drivers = people.selectWith(Person::olderThan, 16);
+
+MutableList<Person> voters = people.selectWith(Person::olderThan, 18);
+
+MutableList<Person> drinkers = people.selectWith(Person::olderThan, 21);
+```
+
+
+
 Lambda-Ready API - groupBy
 ---------------------------
 Grouping people by state
@@ -162,9 +177,6 @@ Eclipse Collections groupByEach
 ```
 Multimap<String, Person> peopleByStates = people.groupByEach(Person::getStates);
 ```
-
-
-
 
 Memory Optimization
 ====================
@@ -245,6 +257,39 @@ Are you up for the challenge?
 * Learn the usage of Java 8 lambdas (the unit tests are written in Java 8)
 * Learn code generation using StringTemplate when you contribute to primitive collections.
 * Roadmap available on github: https://github.com/eclipse/eclipse-collections/wiki/Roadmap
+
+
+
+Appendix
+==========
+
+
+Java 8 Stream
+--------------
+
+* A sequence of elements from a source that supports aggregate operations.
+* In Java 8, the JCF collections have a method stream()
+```
+default Stream<E> stream() 
+{
+    return StreamSupport.stream(spliterator());
+}
+```
+* Streams support internal iterations and pipelining.
+```
+Stream<Address> stream = 
+    people.stream().map(Person::getAddress);
+```
+
+
+Streams are Lazy
+------------------
+![EagerVsLazy](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/EagerVsLazy.png)
+
+
+
+
+(meat vs bun slide)
 
 
 
