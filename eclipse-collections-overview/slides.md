@@ -64,6 +64,7 @@ Comparison with other Java Collections Frameworks
 ![EC Features Comparison](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_Features.png)
 
 
+
 How rich & lambda-ready is your iterable?
 -----------------------------------------
 ![EC Features Comparison](https://github.com/bhav0904/Presentations/blob/gh-pages/eclipse-collections-overview/GSC_RichIterable.png)
