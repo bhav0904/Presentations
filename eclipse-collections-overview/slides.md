@@ -97,7 +97,6 @@ MutableList<Person> sortedByName =
 ```
 
 
-
 Lambda-Ready API
 ----------------
 Finding the oldest person
