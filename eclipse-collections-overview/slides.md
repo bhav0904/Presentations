@@ -59,6 +59,7 @@ MutableList<Address> addressesMethodReference =
 ```
 
 
+
 Java Collections Frameworks Comparison
 
 ![EC Features Comparison](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_Features.png)
@@ -97,7 +98,6 @@ MutableList<Person> sortedByName =
 
 
 
-
 Lambda-Ready API
 ----------------
 Finding the oldest person
@@ -129,7 +129,6 @@ MutableList<Person> drinkers =
 ```
 
 
-
 Lambda-Ready API - groupBy
 ---------------------------
 Grouping people by state
@@ -142,7 +141,6 @@ Multimap<String,Person> peopleByState =
     people.groupBy(Person::getState);
 ```
 ![People By State](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_PeopleByState.png)
-
 
 
 Lambda-Ready API - groupBy
@@ -158,15 +156,12 @@ MutableList<Person> newYorkers =
 ```
 
 
-
-
 Lambda-Ready API - groupByEach
 -------------------------------
 * Problem Statement: Every person has multiple addresses, each in a different state.
 * Group people by state where a person appears as a value mapped to **every** state she has an address in.
 
 ![People By State](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/GSC_PeopleByStates.png)
-
 
 
 
@@ -190,11 +185,11 @@ return peopleByStates;
 ```
 
 
-
 Eclipse Collections groupByEach
 
 ```
-Multimap<String, Person> peopleByStates = people.groupByEach(Person::getStates);
+Multimap<String, Person> peopleByStates = 
+    people.groupByEach(Person::getStates);
 ```
 
 
@@ -202,8 +197,6 @@ Multimap<String, Person> peopleByStates = people.groupByEach(Person::getStates);
 
 Memory Optimization
 ====================
-
-
 
 
 Memory Optimization
@@ -251,7 +244,6 @@ Primitive Collections
     * Eliminates the need to depend on multiple libraries – PCJ, Trove etc.
 
 
-
 Primitive Collections
 ----------------------
 * What primitive collections are available in EC?
@@ -277,6 +269,7 @@ Resources
 * Eclipse Collectins wiki: https://github.com/eclipse/eclipse-collections/wiki
     *  Slides and videos of previous conference talks
     *  Articles
+
 
 
 Are you up for the challenge?
@@ -313,8 +306,6 @@ Stream<Address> stream =
 Streams are Lazy
 ------------------
 ![EagerVsLazy](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/EagerVsLazy.png)
-
-
 
 
 (meat vs bun slide)
