@@ -305,9 +305,3 @@ Stream<Address> stream =
 Streams are Lazy
 ------------------
 ![EagerVsLazy](https://raw.githubusercontent.com/bhav0904/Presentations/gh-pages/eclipse-collections-overview/EagerVsLazy.png)
-
-
-(meat vs bun slide)
-
-
-
