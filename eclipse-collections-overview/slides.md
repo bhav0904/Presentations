@@ -82,6 +82,20 @@ MutableList<Person> people =
 ```
 
 Selecting people whose age is greater than 18
+
+```
+MutableList<Person> adults = 
+    people.select(new Predicate<Person>()
+                  {
+                    public boolean accept(Person person)
+                    {
+                        return person.getAge() > 18;
+                    }
+                  });
+
+```
+
+
 ```
 MutableList<Person> adults = 
     people.select(person -> person.getAge() > 18);
