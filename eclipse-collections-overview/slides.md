@@ -238,13 +238,13 @@ Eclipse Collections groupByEach
 
 ```
 Multimap<String,Person> peopleByState = 
-    people.groupBy(new Function<Person, MutableList<String>>() 
+   people.groupBy(new Function<Person, MutableList<String>>() 
+                {
+                   public MutableList<String> valueOf(Person person) 
                    {
-                      public MutableList<String> valueOf(Person person) 
-                      {
-                         return person.getStates();
-                      }
-                    });
+                      return person.getStates();
+                   }
+                 });
 ```
 
 ```
