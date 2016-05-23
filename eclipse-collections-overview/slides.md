@@ -238,7 +238,7 @@ Eclipse Collections groupByEach
 
 ```
 Multimap<String,Person> peopleByState = 
-   people.groupBy(new Function<Person, MutableList<String>>() 
+   people.groupByEach(new Function<Person, MutableList<String>>() 
                 {
                    public MutableList<String> valueOf(Person person) 
                    {
