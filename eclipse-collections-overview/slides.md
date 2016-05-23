@@ -104,6 +104,17 @@ MutableList<Person> adults =
 Sorting people by their last name 
 ```
 MutableList<Person> sortedByName = 
+    people.toSortedListBy(new Function<Person, String>() 
+                          {
+                              public String valueOf(Person person) 
+                              {
+                                  return person.getName();
+                              }
+                          });
+
+```
+```
+MutableList<Person> sortedByName = 
     people.toSortedListBy(person -> person.getLastName());
 ```
 ```
@@ -114,7 +125,20 @@ MutableList<Person> sortedByName =
 
 Lambda-Ready API
 ----------------
+
 Finding the oldest person
+```
+Person oldestPerson = 
+    people.maxBy(new Function<Person, Integer>() 
+                 {
+                    public Integer valueOf(Person person) 
+                    {
+                        return person.getAge();
+                    }
+                 });
+
+```
+
 ```
 Person oldestPerson = 
     people.maxBy(person -> person.getAge());
@@ -146,6 +170,17 @@ MutableList<Person> drinkers =
 Lambda-Ready API - groupBy
 ---------------------------
 Grouping people by state
+```
+Multimap<String,Person> peopleByState = 
+    people.groupBy(new Function<Person, String>() 
+                   {
+                      public String valueOf(Person person) 
+                      {
+                         return person.getState();
+                      }
+                    });
+```
+
 ```
 Multimap<String,Person> peopleByState = 
     people.groupBy(person -> person.getState());
@@ -200,6 +235,17 @@ return peopleByStates;
 
 
 Eclipse Collections groupByEach
+
+```
+Multimap<String,Person> peopleByState = 
+    people.groupBy(new Function<Person, MutableList<String>>() 
+                   {
+                      public MutableList<String> valueOf(Person person) 
+                      {
+                         return person.getStates();
+                      }
+                    });
+```
 
 ```
 Multimap<String, Person> peopleByStates = 
