@@ -39,7 +39,7 @@ people.collect(new Function<Person, Address>()
                     public Address valueOf(Person person) 
                     {
                         return person.getAddress();
-               }
+                    }
                });
 ```
 
