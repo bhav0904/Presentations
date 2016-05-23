@@ -6,6 +6,7 @@ What is Eclipse Collections?
 ----------------------------
 * An Open Source Collections Framework for Java
 * Rich Lambda-Ready API
+* Optimized alternatives for HashMap, HashSet, ArrayList
 * Additional collection types not found in the JDK like Bags, Multimaps and BiMaps
 
 
