@@ -43,6 +43,7 @@ people.collect(new Function<Person, Address>()
                });
 ```
 
+
 ```
 public static final TO_ADDRESS = 
     new Function<Person, Address>() 
