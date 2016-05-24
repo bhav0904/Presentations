@@ -44,13 +44,14 @@ people.collect(new Function<Person, Address>()
 ```
 
 ```
-public static final TO_ADDRESS = new Function<Person, Address>() 
-                                 {
-                                    public Address valueOf(Person person) 
-                                    {
-                                        return person.getAddress();
-                                    }
-                                }
+public static final TO_ADDRESS = 
+    new Function<Person, Address>() 
+    {
+        public Address valueOf(Person person) 
+        {
+            return person.getAddress();
+        }
+    };
 
 MutableList<Address> addresses = people.collect(Person.TO_ADDRESS);
 ```
